@@ -132,8 +132,11 @@
 
   .hero button {
     margin-right: 0;
-    transform: scale(1.2);
+    transform: scale(1);
   }
+.hero button:hover {
+  transform: scale(1.1);
+}
 
   .features {
     grid-template-columns: repeat(2, 1fr);
@@ -174,8 +177,11 @@
   .hero button {
     margin-right: 0;
     font-size: 17px;
-    transform: scale(1.2);
+    transform: scale(1);
   }
+.hero button:hover {
+  transform: scale(1.1);
+}
 
   .features {
     grid-template-columns: 1fr;
