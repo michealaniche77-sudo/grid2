@@ -1,0 +1,185 @@
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef0ff;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    header {
+      background: #2f3bdb;
+      padding: 15px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      transition: all 0.3 ease-out;
+    }
+    nav a:hover{
+      transform: rotate(6deg);
+      color: #c5cae9;
+    }
+    header ul{
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+    }
+    header li{
+      margin-left: 20px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: #b5bef8;
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 60px;
+      margin-bottom: 10px;
+      margin-right: 35px;
+      padding-right: 35px;
+    }
+    .hero p {
+      text-align: start;
+      width: 60%;
+      margin: auto;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .hero button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #2f3bdb;
+      color: white;
+      font-size: 19px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 540px;
+      transition: all 0.3s ease; 
+      /* display: block; */
+    }
+    button:hover{
+      background:#7981f5;
+      transform: scale(1.2);
+    }
+
+    /* FEATURES SECTION USING GRID */
+    .features {
+      padding: 70px 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+    .feature {
+      background: #ffffff84;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .feature h3 {
+      color: #2f3bdb;
+      margin-bottom: 10px;
+    }
+    .feature p {
+      line-height: 1.6;
+    }
+    footer{
+      text-align: center;
+      bottom: 0;
+      padding: 10px 0;
+      font-size: 15px;
+      background-color: #ddd;
+      color: #000;
+      z-index: 999;
+      /* position: fixed; */
+      width: 100%;
+    }
+    /* ---------- MEDIA QUERY: 768px (Tablets) ---------- */
+@media (max-width: 768px) {
+
+  header {
+    padding: 15px 20px;
+}
+  header h2{
+    font-size: 20px;
+    padding-left: 10px;
+  }
+ header nav a {
+     font-size: 10;
+    }
+  .hero h1 {
+    font-size: 37px;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .hero p {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .hero button {
+    margin-right: 0;
+    transform: scale(1);
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+/* ---------- MEDIA QUERY: 600px (Mobile Devices) ---------- */
+@media (max-width: 600px) {
+
+  header {
+    padding: 15px 20px 15px 0px;
+    height: auto;
+  }
+  header h2{
+    font-size: 17px;
+    padding-left: 20px;
+  }
+
+  header ul {
+    margin-top: 10px;
+  }
+
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .hero p {
+    width: 100%;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .hero button {
+    margin-right: 0;
+    font-size: 17px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+    
