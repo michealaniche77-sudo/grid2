@@ -132,11 +132,7 @@
 
   .hero button {
     margin-right: 0;
-   transition: all 0.3s ease; 
-  }
-.hero button:hover {
-  transform: scale(1.1);
-}
+  } 
 
   .features {
     grid-template-columns: repeat(2, 1fr);
@@ -177,11 +173,7 @@
   .hero button {
     margin-right: 0;
     font-size: 17px;
-   transition: all 0.3s ease; 
   }
-.hero button:hover {
-  transform: scale(1.1);
-}
 
   .features {
     grid-template-columns: 1fr;
