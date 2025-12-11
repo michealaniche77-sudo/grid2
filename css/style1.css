@@ -60,7 +60,7 @@ header li {
   font-weight: 400;
 }
 .hero button {
-  margin-top: 20px;
+  padding-top: 20px;
   padding: 12px 25px;
   background: #2f3bdb;
   color: white;
