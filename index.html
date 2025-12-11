@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grid Landing Page</title>
   <link rel="stylesheet" href="css/style1.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+  rel="stylesheet"
+/>
+
+  <style>
+    /* Wave animation styling */
+    .wave-letter {
+      display: inline-block;
+      font-weight: bold;
+    }
+  </style>
+
 </head>
 <body>
 
@@ -20,7 +33,10 @@
 </header>
 
 <section class="hero">
-  <h1>Welcome To Our Site!</h1>
+
+  <!-- WAVE TEXT TARGET -->
+  <h1 id="waveText">Welcome To Our Site!</h1>
+
   <p>We think you will enjoy our site. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt totam vitae laboriosam, suscipit pariatur praesentium earum explicabo dolorum optio vero facere quam exercitationem voluptatem quas rem odit laborum mollitia ab!</p>
   <button>Learn More</button>
 </section>
@@ -40,20 +56,55 @@
     <h3>Cool Feature #3</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam ab rerum fugit magnam ea ipsa fuga! Quam repellat quia consequatur, dolores, earum commodi at impedit dolorum odit exercitationem nihil numquam?</p>
   </div>
+
   <div class="feature">
     <h3>Cool Feature #4</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam ab rerum fugit magnam ea ipsa fuga! Quam repellat quia consequatur, dolores, earum commodi at impedit dolorum odit exercitationem nihil numquam?</p>
   </div>
+
   <div class="feature">
     <h3>Cool Feature #5</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam ab rerum fugit magnam ea ipsa fuga! Quam repellat quia consequatur, dolores, earum commodi at impedit dolorum odit exercitationem nihil numquam?</p>
   </div>
+
   <div class="feature">
     <h3>Cool Feature #6</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam ab rerum fugit magnam ea ipsa fuga! Quam repellat quia consequatur, dolores, earum commodi at impedit dolorum odit exercitationem nihil numquam?</p>
   </div>
 </section>
+
 <footer>&copy; Micheal Eze Aniche 2025 My Grid Project 2</footer>
+
+<!-- MODERN WAVE TEXT SCRIPT -->
+<script>
+  const waveTarget = document.getElementById("waveText");
+  const text = waveTarget.textContent;
+  waveTarget.textContent = ""; // Clear original text
+
+  // Create spans for each letter
+  text.split("").forEach(char => {
+    const span = document.createElement("span");
+    span.textContent = char;
+    span.classList.add("wave-letter");
+    waveTarget.appendChild(span);
+  });
+
+  const letters = document.querySelectorAll(".wave-letter");
+  let step = 0;
+
+  function animateWave() {
+    letters.forEach((letter, index) => {
+      const wave = Math.abs(Math.sin((index + step) / 4));
+      const size = 26 + wave * 12; // Adjust sizes for H1
+      letter.style.fontSize = size + "px";
+    });
+
+    step += 0.25;
+    requestAnimationFrame(animateWave);
+  }
+
+  animateWave();
+</script>
 
 </body>
 </html>
