@@ -61,6 +61,7 @@ header li {
 }
 .hero button {
   padding-top: 20px;
+  margin-top: 20px
   padding: 12px 25px;
   background: #2f3bdb;
   color: white;
@@ -74,7 +75,7 @@ header li {
 /* Glow animation */
 @keyframes glow {
   from {
-    box-shadow: 0 0 10px #1e90ff;
+    box-shadow: 0 0 25px #1e90ff;
   }
   to {
     box-shadow: 0 0 30px #07073b;
